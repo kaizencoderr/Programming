@@ -2,7 +2,10 @@
 
 ##This repo contains various projects I worked on in my courses as well as personal projects.
 
-Here are breif descriptions of each project file:
+Below is a breif description of each project file:
 
-Bugs:  A game where ants battle against bees; focused on OOP (python)
-Cats:  A program that analyzes the speed and accuracy of the user's typing (python)
+Bugs:  A game where ants battle against bees; heavily focused on OOP (python)
+
+Typer:  A program that analyzes the speed and accuracy of a user's typing (python)
+
+
