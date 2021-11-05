@@ -59,7 +59,7 @@ def about(topic):
                 if topic[j] == paragraphs[i]:
                     return True 
         return False
-    return select #return select function
+    return select
 
 
 def accuracy(typed, reference):
@@ -87,7 +87,6 @@ def accuracy(typed, reference):
     """
     typed_words = split(typed)
     reference_words = split(reference)
-    # BEGIN PROBLEM 3
     words_correct = 0
     if (len(typed_words) == 0 and len(reference_words) == 0):
         return 100.0
@@ -100,7 +99,6 @@ def accuracy(typed, reference):
             if i <= len(typed_words)-1 and typed_words[i] == reference_words[i]:
                 words_correct += 1
         return (words_correct / len(typed_words)) * 100
-    # END PROBLEM 3
 
 
 def wpm(typed, elapsed):
