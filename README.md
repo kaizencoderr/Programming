@@ -2,7 +2,7 @@
 
 ##This repo contains various projects I worked on in my courses as well as personal projects.
 
-Below is a breif description of each project file:
+Below is a breif description of each project file (the files themselves have more in depth project descritpions):
 
 -Bugs:  A game where ants battle against bees; heavily focused on OOP (python)
 
@@ -14,6 +14,7 @@ Below is a breif description of each project file:
 
 -Cipher: A program that can encrpyt and decrypt messages sharing nearly all of the components from the WWII enigma machine. (Java)
 
--
+-Cube: A boardgame of pure strategy where each player is trying to convert all squares to their color or "side."
+       In addition, this project contains an AI component that uses alpha beta pruning of a game tree (Java)
 
 
