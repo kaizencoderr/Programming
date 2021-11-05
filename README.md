@@ -12,6 +12,8 @@ Below is a breif description of each project file:
 
 -Colors: A game where the objective is to get make your board all one color, using a 2D array to store each square of the game (Java)
 
+-Cipher: A program that can encrpyt and decrypt messages sharing nearly all of the components from the WWII enigma machine. (Java)
+
 -
 
 
