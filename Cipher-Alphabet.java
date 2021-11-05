@@ -3,7 +3,6 @@ import static enigma.EnigmaException.*;
 
 /** An alphabet of encodable characters.  Provides a mapping from characters
  *  to and from indices into the alphabet.
- *  @author Tyler Freund
  */
 class Alphabet {
     /** A string of chars containing the alphabet of our machine. */
