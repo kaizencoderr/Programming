@@ -17,7 +17,6 @@ import static jump61.Square.square;
  *  A Board may be given a notifier---a Consumer<Board> whose
  *  .accept method is called whenever the Board's contents are changed.
  *
- *  @author Tyler Freund
  */
 class Board {
 
