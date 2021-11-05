@@ -22,7 +22,6 @@ import static flood.Utils.*;
  *  index or using Places (which represent a row and column index).  Row 0
  *  is intended to represent the top row when the board is displayed.
  *
- *  @author Tyler Freund
  */
 class Model {
 
