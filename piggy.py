@@ -20,7 +20,7 @@ def roll_dice(num_rolls, dice=six_sided):
     # These assert statements ensure that num_rolls is a positive integer.
     assert type(num_rolls) == int, 'num_rolls must be an integer.'
     assert num_rolls > 0, 'Must roll at least once.'
-    # BEGIN PROBLEM 1
+    
     dice_sum = 0
     cur_roll = 0
     one_found = False
@@ -34,7 +34,6 @@ def roll_dice(num_rolls, dice=six_sided):
             one_found = True
             dice_sum = 1
     return dice_sum
-    # END PROBLEM 1
 
 
 def piggy_points(score):
@@ -42,13 +41,11 @@ def piggy_points(score):
 
     score:  The opponent's current score.
     """
-    # BEGIN PROBLEM 2
     ones_digit= score%10
     tens_digit= (score%100//10)
     k= abs(tens_digit-ones_digit)
     piggy= (k+4)
     return piggy
-    # END PROBLEM 2
 
 
 def take_turn(num_rolls, opponent_score, dice=six_sided, goal=GOAL_SCORE):
@@ -66,14 +63,13 @@ def take_turn(num_rolls, opponent_score, dice=six_sided, goal=GOAL_SCORE):
     assert num_rolls >= 0, 'Cannot roll a negative number of dice in take_turn.'
     assert num_rolls <= 10, 'Cannot roll more than 10 dice.'
     assert opponent_score < goal, 'The game should be over.'
-    # BEGIN PROBLEM 3
+    
     pts_scored=0
     if num_rolls!=0:
         pts_scored = roll_dice(num_rolls,dice)
     else:
         pts_scored = piggy_points(opponent_score)
     return pts_scored
-    # END PROBLEM 3
 
 
 def more_boar(player_score, opponent_score):
@@ -93,18 +89,7 @@ def more_boar(player_score, opponent_score):
     >>> more_boar(7, 8)
     False
     """
-    # BEGIN PROBLEM 4
-    #pmin = min(player_score%10, player_score%100//10, player_score//100)
-    #omin = min(opponent_score%10, opponent_score%100//10, opponent_score//100)
-    #pmax = max(player_score%10, player_score%100//10, player_score//100)
-    #omax = max(opponent_score%10, opponent_score%100//10, opponent_score//100)
-    #if pmin<omin and pmax>omax:
-    #    boar = True
-    #else:
-    #    boar = False
-    #return boar
-
-    #
+   
     # Making input integers into strings to be iterated through for each digit
     str_ver_pr_score = str(player_score)
     str_ver_opp_score = str(opponent_score)
@@ -138,7 +123,6 @@ def more_boar(player_score, opponent_score):
         return True
     else:
         return False
-    # END PROBLEM 4
 
 
 def next_player(who):
@@ -175,7 +159,7 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
     say:        The commentary function to call at the end of the first turn.
     """
     who = 0  # Who is about to take a turn, 0 (first) or 1 (second)
-    # BEGIN PROBLEM 5
+    
     while score0<goal and score1<goal:
         if who==0:
             score0+= take_turn(strategy0(score0, score1), score1, dice, goal)
@@ -191,14 +175,6 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
             else:
                 who = next_player(who)
             say= say(score0, score1)
-    
-    # END PROBLEM 5
-    
-    
-    # (note that the indentation for the problem 6 prompt (***YOUR CODE HERE***) might be misleading)
-    # BEGIN PROBLEM 6
-
-    # END PROBLEM 6
     return score0, score1
 
 
@@ -277,7 +253,6 @@ def announce_highest(who, last_score=0, running_high=0):
     Player 1 has reached a new maximum point gain. 30 point(s)!
     """
     assert who == 0 or who == 1, 'The who argument should indicate a player.'
-    # BEGIN PROBLEM 7
     def say(score0,score1):
         if who == 0:
             if (score0 - last_score) > running_high:
@@ -290,7 +265,6 @@ def announce_highest(who, last_score=0, running_high=0):
                 return announce_highest(who,score1,score1-last_score)
             return announce_highest(who,score1,running_high)
     return say
-    # END PROBLEM 7
 
 
 #######################
@@ -327,14 +301,12 @@ def make_averaged(original_function, trials_count=1000):
     >>> averaged_dice(1, dice)
     3.0
     """
-    # BEGIN PROBLEM 8
     def helper(*args):
         result = 0
         for i in range(0, trials_count):
             result += original_function(*args)
         return result / trials_count # return avg
     return helper
-    # END PROBLEM 8
 
 
 def max_scoring_num_rolls(dice=six_sided, trials_count=1000):
@@ -346,7 +318,6 @@ def max_scoring_num_rolls(dice=six_sided, trials_count=1000):
     >>> max_scoring_num_rolls(dice)
     1
     """
-    # BEGIN PROBLEM 9
     num_rolls= 1
     themax=1
     while num_rolls<=10:
@@ -362,7 +333,6 @@ def max_scoring_num_rolls(dice=six_sided, trials_count=1000):
         else:
             num_rolls+=1
     return themax
-    # END PROBLEM 9
 
 
 def winner(strategy0, strategy1):
@@ -401,12 +371,10 @@ def piggypoints_strategy(score, opponent_score, cutoff=8, num_rolls=6):
     """This strategy returns 0 dice if that gives at least CUTOFF points, and
     returns NUM_ROLLS otherwise.
     """
-    # BEGIN PROBLEM 10
     if piggy_points(opponent_score) >= cutoff:
         return 0
     else:
         return num_rolls
-    # END PROBLEM 10
 
 
 def more_boar_strategy(score, opponent_score, cutoff=8, num_rolls=6):
@@ -414,7 +382,6 @@ def more_boar_strategy(score, opponent_score, cutoff=8, num_rolls=6):
     returns 0 dice if it gives at least CUTOFF points and does not give an extra turn.
     Otherwise, it returns NUM_ROLLS.
     """
-    # BEGIN PROBLEM 11
     score+= piggy_points(opponent_score)
     if more_boar(score, opponent_score):
         return 0
@@ -422,17 +389,12 @@ def more_boar_strategy(score, opponent_score, cutoff=8, num_rolls=6):
         return 0
     else:
         return num_rolls
-    # END PROBLEM 11
 
 
 def final_strategy(score, opponent_score):
     """Write a brief description of your final strategy.
-
-    *** YOUR DESCRIPTION HERE ***
     """
-    # BEGIN PROBLEM 12
-    return 6  # Replace this statement
-    # END PROBLEM 12
+    return 6  
 
 ##########################
 # Command Line Interface #
