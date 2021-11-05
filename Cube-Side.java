@@ -1,7 +1,6 @@
 package jump61;
 
 /** Player and square colors for jump61.
- *  @author P. N. Hilfinger
  */
 enum Side {
 
