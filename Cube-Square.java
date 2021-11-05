@@ -3,7 +3,6 @@ package jump61;
 import static jump61.Side.*;
 
 /** Represents the contents of one square on a Jump61 game.
- *  @author P. N. Hilfinger
  */
 class Square {
 
