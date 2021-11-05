@@ -4,7 +4,6 @@ import static enigma.EnigmaException.*;
 
 /** Represents a permutation of a range of integers starting at 0 corresponding
  *  to the characters of an alphabet.
- *  @author Tyler Freund
  */
 class Permutation {
     /** Set this Permutation to that specified by CYCLES, a string in the
