@@ -29,7 +29,6 @@ def choose(paragraphs, select, k):
     >>> choose(ps, s, 2)
     ''
     """
-    # BEGIN PROBLEM 1
     k_count = 0
     for i in range(len(paragraphs)):
         if(select(paragraphs[i]) == True):
@@ -37,7 +36,6 @@ def choose(paragraphs, select, k):
         if(k_count > k and select(paragraphs[i]) == True):
             return paragraphs[i]
     return ('')
-    # END PROBLEM 1
 
 
 def about(topic):
@@ -54,7 +52,6 @@ def about(topic):
     'Nice pup.'
     """
     assert all([lower(x) == x for x in topic]), 'topics should be lowercase.'
-    # BEGIN PROBLEM 2
     def select(paragraphs):
         paragraphs = remove_punctuation(paragraphs).lower().split() #reformat
         for i in range(len(paragraphs)):
@@ -63,7 +60,6 @@ def about(topic):
                     return True 
         return False
     return select #return select function
-    # END PROBLEM 2
 
 
 def accuracy(typed, reference):
@@ -119,10 +115,9 @@ def wpm(typed, elapsed):
     >>> wpm('0123456789',60)
     2.0
     """
-    assert elapsed > 0, 'Elapsed time must be positive'
-    # BEGIN PROBLEM 4
+    assert elapsed > 0, 'Elapsed time must be positive
     return (((len(typed)/5) / elapsed) * 60)
-    # END PROBLEM 4
+
 
 
 ###########
@@ -147,8 +142,6 @@ def autocorrect(typed_word, valid_words, diff_function, limit):
     >>> autocorrect("tosting", ["testing", "asking", "fasting"], first_diff, 10)
     'testing'
     """
-    # BEGIN PROBLEM 5
-    
     if typed_word in valid_words:
         return typed_word
     diffs=[]
@@ -160,9 +153,7 @@ def autocorrect(typed_word, valid_words, diff_function, limit):
     else:
         return min(valid_words, key= lambda x: diff_function(typed_word, x, limit))
 
-    # END PROBLEM 5
-
-
+    
 def feline_flips(start, goal, limit):
     """A diff function for autocorrect that determines how many letters
     in START need to be substituted to create GOAL, then adds the difference in
@@ -185,7 +176,6 @@ def feline_flips(start, goal, limit):
     >>> feline_flips("rose", "hello", big_limit)   # Substitute: r->h, o->e, s->l, e->l, length difference of 1.
     5
     """
-    # BEGIN PROBLEM 6
     
     if start == "" or goal == "":
         return abs(len(start)-len(goal))
@@ -195,10 +185,7 @@ def feline_flips(start, goal, limit):
         return feline_flips(start[1:], goal[1:], limit)
     else:
         return 1 + feline_flips(start[1:], goal[1:], limit-1)
-
-    #assert False, 'Remove this line'
-    # END PROBLEM 6
-
+    
 
 def minimum_mewtations(start, goal, limit):
     """A diff function that computes the edit distance from START to GOAL.
@@ -217,28 +204,20 @@ def minimum_mewtations(start, goal, limit):
     >>> minimum_mewtations("ckiteus", "kittens", big_limit) # ckiteus -> kiteus -> kitteus -> kittens
     3
     """
-    #assert False, 'Remove this line'
 
     if start == "" or goal == "":  # Fill in the condition
-        # BEGIN
         return abs(len(start)-len(goal))
-        # END
 
     elif limit<0 or abs(len(start)-len(goal)) > limit:  # Feel free to remove or add additional cases
-        # BEGIN
         return 1000000
-        # END
     elif start[:1]==goal[:1]:
         return minimum_mewtations(start[1:], goal[1:], limit)
-
     else:
         add = 1 + minimum_mewtations(start, goal[1:], limit-1)   # Fill in these lines
         remove = 1 + minimum_mewtations(start[1:], goal, limit-1)
         substitute = 1 + minimum_mewtations(start[1:], goal[1:], limit-1)
-        # BEGIN
     return min(add, remove, substitute)
-        # END
-        
+    
 
 def final_diff(start, goal, limit):
     """A diff function that takes in a string START, a string GOAL, and a number LIMIT.
@@ -246,7 +225,7 @@ def final_diff(start, goal, limit):
     assert False, 'Remove this line to use your final_diff function.'
 
 
-FINAL_DIFF_LIMIT = 6  # REPLACE THIS WITH YOUR LIMIT
+FINAL_DIFF_LIMIT = 6 
 
 
 ###########
@@ -277,7 +256,7 @@ def report_progress(sofar, prompt, user_id, send):
     ID: 3 Progress: 0.2
     0.2
     """
-    # BEGIN PROBLEM 8
+    
     words_typed_correctly = 0
     for i in range(len(sofar)):
         if sofar[i] == prompt[i]:
@@ -287,7 +266,6 @@ def report_progress(sofar, prompt, user_id, send):
             return words_typed_correctly / len(prompt)
     send({'id': user_id, 'progress': words_typed_correctly / len(prompt)})
     return words_typed_correctly / len(prompt)
-    # END PROBLEM 8
 
 
 def fastest_words_report(times_per_player, words):
@@ -318,13 +296,11 @@ def time_per_word(times_per_player, words):
     >>> get_times(game)
     [[6, 3, 6, 2], [10, 6, 1, 2]]
     """
-    # BEGIN PROBLEM 9
     times = []
     for i in range(len(times_per_player)):
         player_time = [j-i for i, j in zip(times_per_player[i][:-1], times_per_player[i][1:])]
         times.append(player_time)
     return game(words, times)
-    # END PROBLEM 9
 
 
 def fastest_words(game):
@@ -340,7 +316,6 @@ def fastest_words(game):
     """
     player_indices = range(len(get_times(game)))  # contains an *index* for each player
     word_indices = range(len(get_words(game)))    # contains an *index* for each word
-    # BEGIN PROBLEM 10
 
     player_times_per_word = [] #list of list, with a list for each player
     for p in player_indices:
@@ -351,7 +326,7 @@ def fastest_words(game):
 
     fastest_word = []
     for i in player_indices:
-        fastest_word.append([]) # [[],[]]
+        fastest_word.append([])
 
     words_entered = []
     for p in player_indices:
@@ -362,7 +337,7 @@ def fastest_words(game):
                     words_entered += [word_at(game,w)]
                     fastest_word[p] += [word_at(game, w)]
     return fastest_word
-    # END PROBLEM 10
+  
 
 
 def game(words, times):
