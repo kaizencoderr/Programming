@@ -6,7 +6,6 @@ import java.util.Random;
 import static jump61.Side.*;
 
 /** An automated Player.
- *  @author P. N. Hilfinger
  */
 class AI extends Player {
 
