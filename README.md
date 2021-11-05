@@ -8,7 +8,9 @@ Below is a breif description of each project file:
 
 -Typer:  A program that analyzes the speed and accuracy of a user's typing (python)
 
--Piggy:  A game played with die where the first player to 100 wins (python)
+-Piggy:  A game played with dice where the first player to 100 wins (python)
+
+-Colors: A game where the objective is to get make your board all one color, using a 2D array to store each square of the game (Java)
 
 -
 
