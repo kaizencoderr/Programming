@@ -7,7 +7,7 @@ Below is a high level overview of each project file (the files themselves have m
 -Cube: A pure strategy boardgame where each player is trying to convert all squares to their color or "side."
        In addition, this project contains an AI component that implements alpha beta pruning of a game tree (Java)
        
--Enigma: A program that can encrpyt and decrypt messages sharing nearly all of the components from the WWII enigma machine. (Java)       
+-Cipher: A program that can encrpyt and decrypt messages sharing nearly all of the components from the WWII enigma machine. (Java)       
 
 -Bugs:  A game where ants battle against bees; heavily focused on OOP (Python)
 
