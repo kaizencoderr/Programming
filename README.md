@@ -16,3 +16,6 @@ Below is a high level overview of each project file (the files themselves have m
 -Colors: A game where the objective is to get make your board all one color, using a 2D array to store each square of the game (Java)
 
 -Piggy:  A game played with dice where the first player to 100 wins (Python)
+
+-Gitlet: A recreation of the git software that commits different versions of files, reports the status of the current working directory, and allows the user to revert to prior versions of their project.  This program allows a user to run 13 of the commonly used git commands.
+
