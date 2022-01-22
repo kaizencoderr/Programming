@@ -24,3 +24,6 @@
 
 #### Path: Programming/Data Structures + algorithms/Assignments/
 -Assignments description: This folder contains lab/homework assignments that are much shorter and delve deeply into a specific topic.
+
+#### Path: Programming/Structure of computer programs/Assignments/
+-Assignments description: This folder contains lab/homework assignments that are much shorter and delve deeply into a specific topic.
