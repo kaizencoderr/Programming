@@ -11,7 +11,9 @@
 -Enigma Machine description: A program that can encrpyt and decrypt messages sharing nearly all of the components from the WWII enigma machine. (Java)
 
 #### Path: Programming/Data Structures + algorithms/colors project/
--Colors description: A game where the objective is to get make your board all one color, using a 2D array to store each square of the game (Java)
+-Colors description: A game played on a W×H rectangular grid of square cells. Every square is colored from a set of available colors. The term active region refers to the set of grid cells having the same color as the upper-left cell and orthogonally reachable from that square. A cell is orthogonally reachable from a square S having color C if it can be reached by moving one square at a time up, down, left, or right starting from S and moving only to squares of color C.
+Each time the player clicks on a square with a color different from that of the active region, all the cells currently in the active region take on that color. So if there are cells of this color adjacent to the active region, they get added to the active region.
+The player's goal is to make all cells the same color by clicking a series of cells. The program sets an upper limit on the number of moves, depending on its own determination of how many moves are needed. (Java)-(OOP, arrays, hashsets)
 
 #### Path: Programming/Structure of computer programs/bugs project/
 -Bugs description:  A game in which a battle between ants and bees takes place.  There is a parent class "insects" that has children classes "ants" and "bees"; the ants and bees classes have many children themselves with differing attributes for each subclass. (Python)-(Inheritance, object-oriented programming, classes)
