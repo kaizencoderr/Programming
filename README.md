@@ -8,7 +8,7 @@
        In addition, this project contains an AI component that implements alpha beta pruning of a game tree (Java)
   
 #### Path: Programming/Data Structures + algorithms/enigma machine project/
--Enigma Machine description: A program that can encrpyt and decrypt messages sharing nearly all of the components from the WWII enigma machine. (Java)
+-Enigma Machine description: A simulator for a generalized version of the WWII German enigma machine.  This program takes descriptions of possible initial configurations of the machine and messages to encode or decode.  The details of the enigma machine can be found at https://en.wikipedia.org/wiki/Enigma_machine This version of the enigma machine uses the same components as the real enigma machine but generalizes beyond the alphabet. (Java)-(OOP, interfaces, comparables)
 
 #### Path: Programming/Data Structures + algorithms/colors project/
 -Colors description: A game played on a W×H rectangular grid of square cells. Every square is colored from a set of available colors. The term active region refers to the set of grid cells having the same color as the upper-left cell and orthogonally reachable from that square. A cell is orthogonally reachable from a square S having color C if it can be reached by moving one square at a time up, down, left, or right starting from S and moving only to squares of color C.
