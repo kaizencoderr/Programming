@@ -17,7 +17,7 @@
 -Bugs description:  A game where ants battle against bees; heavily focused on OOP (Python)
 
 #### Path: Programming/Structure of computer programs/typer project/
--Typer description:  A program that measures typing speed and implements typing autocorrect, which is a feature that attempts to correct the spelling of a word after a user types it.  (Python)-(Recursion, abstraction, string manipulation)
+-Typer description:  A program that measures typing speed and implements typing autocorrect, which is a feature that attempts to correct the spelling of a word after a user types it.  (Python)-(Recursion, abstraction, string manipulation, lists)
 
 #### Path: Programming/Structure of computer programs/piggy project/
 -Piggy description:  Two players alternate turns trying to be the first to end a turn with at least 100 total points. On each turn, the current player chooses some number of dice to roll, up to 10. That player's score for the turn is the sum of the dice outcomes. (Python)-(Higher order functions, control statements, recursion)
