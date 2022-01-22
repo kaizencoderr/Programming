@@ -20,4 +20,7 @@
 -Typer description:  A program that analyzes the speed and accuracy of a user's typing (Python)
 
 #### Path: Programming/Structure of computer programs/piggy project/
--Piggy description:  A board game played with dice where the first player to 100 wins (Python)
+-Piggy description:  Two players alternate turns trying to be the first to end a turn with at least 100 total points. On each turn, the current player chooses some number of dice to roll, up to 10. That player's score for the turn is the sum of the dice outcomes. (Python)-(Higher order functions, control statements, recursion)
+
+#### Path: Programming/Data Structures + algorithms/Assignments/
+-Assignments description: This folder contains lab/homework assignments that are much shorter and focus on a specific topic
