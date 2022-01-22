@@ -4,8 +4,10 @@
 -Gitlet description: A recreation of the git software that commits different versions of files, reports the status of the current working directory, and allows the user to revert to prior versions of their project.  This program allows a user to run 13 of the commonly used git commands.
 
 #### Path: Programming/Data Structures + algorithms/cube project/
--Cube description: A pure strategy boardgame where each player is trying to convert all squares to their color or "side."
-       In addition, this project contains an AI component that implements alpha beta pruning of a game tree (Java)
+-Cube description: A two player pure strategy boardgame consisting of an N×N array of squares, where N>1. At any time, each square may have one of three colors: red, blue, or white (neutral), and some number of spots (as on dice). Initially, all squares are white and have one spot.
+The neighbors of a square are the horizontally and vertically adjacent squares (diagonally adjacent squares are not neighbors). We say that a square is overfull if it contains more spots than it has neighbors. Thus, the four corner squares are overfull when they have more than two spots; other squares on the edge are overfull with more than three spots; and all others are overfull with more than four spots.
+There are two players, whom we'll call Red and Blue. The players each move in turn, with Red going first. A move consists of adding one spot on any square that does not have the opponent's color (so Red may add a spot to either a red or white square). A spot placed on any square colors that square with the player's color.
+This project contains an AI component to automatically play against a real user.  The game can be played at this link: http://www.playonlinedicegames.com/jumpingcube (Java)-(Trees, OOP, game trees, alpha beta pruning)
   
 #### Path: Programming/Data Structures + algorithms/enigma machine project/
 -Enigma Machine description: A simulator for a generalized version of the WWII German enigma machine.  This program takes descriptions of possible initial configurations of the machine and messages to encode or decode.  The details of the enigma machine can be found at https://en.wikipedia.org/wiki/Enigma_machine This version of the enigma machine uses the same components as the real enigma machine but generalizes beyond the alphabet. (Java)-(OOP, interfaces, comparables)
