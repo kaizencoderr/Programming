@@ -1,8 +1,8 @@
-# School-Personal-Projects
+# Programming Projects
 
-##This repo contains various projects I worked on in my courses as well as personal projects.
+##This repo contains various projects I worked on in my computer science courses.
 
-Below is a high level overview of each project file (the files themselves have more in depth project descritpions):
+Below is a high level overview of each project file:
 
 -Cube: A pure strategy boardgame where each player is trying to convert all squares to their color or "side."
        In addition, this project contains an AI component that implements alpha beta pruning of a game tree (Java)
