@@ -14,7 +14,7 @@
 -Colors description: A game where the objective is to get make your board all one color, using a 2D array to store each square of the game (Java)
 
 #### Path: Programming/Structure of computer programs/bugs project/
--Bugs description:  A game where ants battle against bees; heavily focused on OOP (Python)
+-Bugs description:  A game in which a battle between ants and bees takes place.  There is a parent class "insects" that has children classes "ants" and "bees"; the ants and bees classes have many children themselves with differing attributes for each subclass. (Python)-(Inheritance, object-oriented programming, classes)
 
 #### Path: Programming/Structure of computer programs/typer project/
 -Typer description:  A program that measures typing speed and implements typing autocorrect, which is a feature that attempts to correct the spelling of a word after a user types it.  (Python)-(Recursion, abstraction, string manipulation, lists)
@@ -23,4 +23,4 @@
 -Piggy description:  Two players alternate turns trying to be the first to end a turn with at least 100 total points. On each turn, the current player chooses some number of dice to roll, up to 10. That player's score for the turn is the sum of the dice outcomes. (Python)-(Higher order functions, control statements, recursion)
 
 #### Path: Programming/Data Structures + algorithms/Assignments/
--Assignments description: This folder contains lab/homework assignments that are much shorter and focus on a specific topic
+-Assignments description: This folder contains lab/homework assignments that are much shorter and delve deeply into a specific topic.
