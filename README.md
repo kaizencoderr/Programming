@@ -1,7 +1,7 @@
 # Programming Projects
 
 #### Path: Programming/Data Structures + algorithms/gitlet project/
--Gitlet description: A recreation of the git software that commits different versions of files, reports the status of the current working directory, and allows the user to revert to prior versions of their project.  This program allows a user to run 13 of the commonly used git commands.
+-Gitlet description: A recreation of the git software that commits different versions of files, reports the status of the current working directory, and allows the user to revert to prior versions of their project.  This program allows a user to run 13 of the commonly used git commands including: init, add, commit, rm, log, global-log, find, status, checkout, branch, rm-branch, reset, merge. (Java)-(OOP, Trees, persistance, search algorithms, queues)
 
 #### Path: Programming/Data Structures + algorithms/cube project/
 -Cube description: A two player pure strategy boardgame consisting of an N×N array of squares, where N>1. At any time, each square may have one of three colors: red, blue, or white (neutral), and some number of spots (as on dice). Initially, all squares are white and have one spot.
